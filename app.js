@@ -98,6 +98,12 @@ let mouseButtonPressed = (event, index) => {
 
 /** 
  * @todo FOR ASSIGNMENT 2, ADD YOUR OWN FUNCTION DEFINITIONS AS DIRECTED IN THE ASSIGNMENT
+ let convertToLarger = (numberToBeConverted, positiveConversionFactor) => Math.trunc(numberToBeConverted / positiveConversionFactor);
+ let msToTotalSeconds = millisecondsToConvert => {let msInOneSecond = 1000; return convertToLarger(millisecondsToConvert / msInOneSecond);}
+ let msToTotalMinutes = millisecondsToConvert => {let secondsInOneMinute = 60; return convertToLarger(msToTotalSeconds(millisecondsToConvert) / secondsInOneMinute);}
+ let msToTotalHours = millisecondsToConvert => {let minutesInOneHour = 60; return convertToLarger(msToTotalMinutes(millisecondsToConvert / minutesInOneHour);}
+ let remainingAfterConvert = (millisecondsForConversion, positiveConversionFactor) => Math.trunc(numberToBeConverted % positiveConversionFactor);
+ let getSecondFromMs = num => remainingAfterConvert(
  * @todo THEN USING THESE FUNCTIONS, REPLACE THE 0 IN EACH FUNCTION DEFINITION BELOW WITH THE APPROPRIATE OUTPUT
  * @todo BE SURE TO DOCUMENT EACH FUNCTION IN JSDOC FORMAT (USE BELOW AS REFERENCE AND SEE: http://usejsdoc.org/)
  */
