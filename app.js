@@ -96,17 +96,15 @@ let mouseButtonPressed = (event, index) => {
   return buttonClickedIndex === index;
 };
 
-/** 
+ 
  * @todo FOR ASSIGNMENT 2, ADD YOUR OWN FUNCTION DEFINITIONS AS DIRECTED IN THE ASSIGNMENT
  let convertToLarger = (numberToBeConverted, positiveConversionFactor) => Math.trunc(numberToBeConverted / positiveConversionFactor);
- let msToTotalSeconds = millisecondsToConvert => {let msInOneSecond = 1000; return convertToLarger(millisecondsToConvert / msInOneSecond);}
- let msToTotalMinutes = millisecondsToConvert => {let secondsInOneMinute = 60; return convertToLarger(msToTotalSeconds(millisecondsToConvert) / secondsInOneMinute);}
- let msToTotalHours = millisecondsToConvert => {let minutesInOneHour = 60; return convertToLarger(msToTotalMinutes(millisecondsToConvert / minutesInOneHour);}
- let remainingAfterConvert = (millisecondsForConversion, positiveConversionFactor) => Math.trunc(millisecondsForConversion % positiveConversionFactor);
- let getSecondFromMs = num => msToTotalSeconds(remainingAfterConvert(num, 24));
+ let msToTotalSeconds = millisecondsToConvert => convertToLarger(millisecondsToConvert, 1000);
+ let msToTotalMinutes = millisecondsToConvert => convertToLarger(msToTotalSeconds(millisecondsToConvert), 60);
+ let msToTotalHours = millisecondsToConvert => convertToLarger(msToTotalMinutes(millisecondsToConvert),60);
  * @todo THEN USING THESE FUNCTIONS, REPLACE THE 0 IN EACH FUNCTION DEFINITION BELOW WITH THE APPROPRIATE OUTPUT
  * @todo BE SURE TO DOCUMENT EACH FUNCTION IN JSDOC FORMAT (USE BELOW AS REFERENCE AND SEE: http://usejsdoc.org/)
- */
+ 
 
 /**
  * Given a number of milliseconds from midnight, returns the second (0 to 60) for the displayed time
@@ -114,10 +112,10 @@ let mouseButtonPressed = (event, index) => {
  * @return {number} second for the displayed time (0 to 60)
  */
 
-let getSecondFromMs   = num => msToTotalSeconds(remainingAfterConvert(num, 86,400,000));
+let getSecondFromMs   = num => msToTotalSeconds(remainingAfterConvert(num, 60000));
 
-let getMinuteFromMs   = num => msToTotalMinutes(remainingAfterConvert(num, 86,400,000));
-let getHourFromMs     = num => msToTotalHours(remainingAfterConvert(num, 86,400,000));
+let getMinuteFromMs   = num => msToTotalMinutes(remainingAfterConvert(num, 3600000));
+let getHourFromMs     = num => msToTotalHours(remainingAfterConvert(num, 86400000));
 
 let getSecondFromDays = num => 0;
 let getMinuteFromDays = num => 0;
