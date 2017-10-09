@@ -97,7 +97,7 @@ let mouseButtonPressed = (event, index) => {
 };
 
  
- * @todo FOR ASSIGNMENT 2, ADD YOUR OWN FUNCTION DEFINITIONS AS DIRECTED IN THE ASSIGNMENT
+// * @todo FOR ASSIGNMENT 2, ADD YOUR OWN FUNCTION DEFINITIONS AS DIRECTED IN THE ASSIGNMENT
  let convertToLarger = (numberToBeConverted, positiveConversionFactor) => Math.trunc(numberToBeConverted / positiveConversionFactor);
  let msToTotalSeconds = millisecondsToConvert => convertToLarger(millisecondsToConvert, 1000);
  let msToTotalMinutes = millisecondsToConvert => convertToLarger(msToTotalSeconds(millisecondsToConvert), 60);
@@ -107,8 +107,8 @@ let mouseButtonPressed = (event, index) => {
  let daysToTotalMinutes = daysToConvert => convertToSmaller(daysToTotalHours(daysToConvert), 60);
  let daysToTotalSeconds = daysToConvert => convertToSmaller(daysToTotalMinutes(daysToConvert), 60);
  let remainingAfterConvert = (millisecondsForConversion, positiveConversionFactor) => Math.trunc(millisecondsForConversion % positiveConversionFactor);
- * @todo THEN USING THESE FUNCTIONS, REPLACE THE 0 IN EACH FUNCTION DEFINITION BELOW WITH THE APPROPRIATE OUTPUT
- * @todo BE SURE TO DOCUMENT EACH FUNCTION IN JSDOC FORMAT (USE BELOW AS REFERENCE AND SEE: http://usejsdoc.org/)
+// * @todo THEN USING THESE FUNCTIONS, REPLACE THE 0 IN EACH FUNCTION DEFINITION BELOW WITH THE APPROPRIATE OUTPUT
+ //* @todo BE SURE TO DOCUMENT EACH FUNCTION IN JSDOC FORMAT (USE BELOW AS REFERENCE AND SEE: http://usejsdoc.org/)
  
 
 /**
@@ -117,7 +117,7 @@ let mouseButtonPressed = (event, index) => {
  * @return {number} second for the displayed time (0 to 60)
  */
 
-let getSecondFromMs   = num => msToTotalSeconds(remainingAfterConvert(num, 60000));
+let getSecondFromMs = num => msToTotalSeconds(remainingAfterConvert(num, 60000));
 
 let getMinuteFromMs   = num => msToTotalMinutes(remainingAfterConvert(num, 3600000));
 let getHourFromMs     = num => msToTotalHours(remainingAfterConvert(num, 86400000));
