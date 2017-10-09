@@ -106,7 +106,7 @@ let mouseButtonPressed = (event, index) => {
  let daysToTotalHours  = daysToConvert => convertToSmaller(daysToConvert, 24);
  let daysToTotalMinutes = daysToConvert => convertToSmaller(daysToTotalHours(daysToConvert), 60);
  let daysToTotalSeconds = daysToConvert => convertToSmaller(daysToTotalMinutes(daysToConvert), 60);
-
+ let remainingAfterConvert = (millisecondsForConversion, positiveConversionFactor) => Math.trunc(millisecondsForConversion % positiveConversionFactor);
  * @todo THEN USING THESE FUNCTIONS, REPLACE THE 0 IN EACH FUNCTION DEFINITION BELOW WITH THE APPROPRIATE OUTPUT
  * @todo BE SURE TO DOCUMENT EACH FUNCTION IN JSDOC FORMAT (USE BELOW AS REFERENCE AND SEE: http://usejsdoc.org/)
  
